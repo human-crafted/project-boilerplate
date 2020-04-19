@@ -58,7 +58,7 @@ class UsersAPI extends RESTDataSource {
         Array.isArray(response.items) &&
         response.items.length !== 0
       ) {
-        return response.items.map(user => this.userReducer(user));
+        return response.items.map((user) => this.userReducer(user));
       }
       return null;
     } catch (e) {

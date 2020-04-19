@@ -1,6 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const logo = require('./logo.svg');
 
 function App() {
   return (
