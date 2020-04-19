@@ -1,0 +1,16 @@
+# import CountryCodes from "./country-codes.graphql"
+scalar EmailAddress
+scalar DateTime
+
+type Query {
+  users: [User]
+}
+
+type User {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  emailAddress: EmailAddress!
+  country: CountryCodes!
+  signUpDate: DateTime!
+}

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Server - e2e Gets list of users 1`] = `
+Object {
+  "data": Object {
+    "users": Array [
+      Object {
+        "country": "GBR",
+        "emailAddress": "leeroy.jenkins@humancrafted.tech",
+        "firstName": "Leeroy",
+        "id": "828382nsdjnj2",
+        "lastName": "Jenkins",
+        "signUpDate": "2020-01-20T16:29:56.6575020Z",
+      },
+    ],
+  },
+}
+`;

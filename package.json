@@ -1,0 +1,49 @@
+{
+  "name": "project-boilerplate",
+  "private": true,
+  "version": "0.0.1",
+  "workspaces": {
+    "packages": [
+      "frontend/*",
+      "backend/*",
+      "packages/*"
+    ],
+    "nohoist": []
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn test"
+    }
+  },
+  "scripts": {
+    "run:frontend": "yarn workspace web start",
+    "run:backend": "yarn workspace graphql-api start",
+    "start": "yarn run:backend & yarn run:frontend",
+    "test:frontend": "yarn workspace web test:ci",
+    "test:backend": "yarn workspace graphql-api test",
+    "test": "yarn test:frontend && yarn test:backend",
+    "lint:frontend": "eslint --ignore-path .gitignore './frontend/web/src/*.ts' --fix './frontend/web/src/*.tsx' --fix",
+    "lint:backend": "eslint --ignore-path .gitignore './backend/graphql-api/src/**/*.ts' --fix",
+    "lint": "yarn lint:backend && yarn lint:frontend",
+    "reset:modules": "rimraf node_modules/ yarn.lock apps/*/node_modules",
+    "reset": "yarn reset:modules && yarn cache clean"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "2.21.0",
+    "@typescript-eslint/parser": "2.21.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-config-prettier": "6.10.0",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-prettier": "3.1.2",
+    "eslint-plugin-react": "7.18.3",
+    "husky": "3.0.5",
+    "prettier": "1.19.1",
+    "stylelint": "11.1.0",
+    "stylelint-config-recommended": "3.0.0",
+    "stylelint-config-styled-components": "0.1.1",
+    "stylelint-processor-styled-components": "1.10.0",
+    "rimraf": "2.6.3"
+  }
+}
