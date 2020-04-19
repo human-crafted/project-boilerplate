@@ -18,7 +18,7 @@
   "scripts": {
     "run:frontend": "yarn workspace web start",
     "run:backend": "yarn workspace graphql-api start",
-    "start": "yarn run:backend & yarn run:frontend",
+    "start": "yarn && yarn run:backend & yarn run:frontend",
     "test:frontend": "yarn workspace web test:ci",
     "test:backend": "yarn workspace graphql-api test",
     "test": "yarn test:frontend && yarn test:backend",

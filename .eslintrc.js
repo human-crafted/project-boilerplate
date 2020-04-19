@@ -43,7 +43,6 @@ module.exports = {
         "@typescript-eslint/explicit-member-accessibility": "off",
         "@typescript-eslint/camelcase": "off", // Apollo GraphQL auto-generated types
         "@typescript-eslint/ban-ts-ignore": "off", // annoying to have this when we need ts-ignore to make tests work
-        "@typescript-eslint/no-empty-function": "off",
         /**
          * @description rules of eslint-plugin-react
          */
