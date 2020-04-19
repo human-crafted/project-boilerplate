@@ -24,7 +24,7 @@ const constructTestServer = () => {
  * e2e Testing Utils
  */
 
-const startTestServer = async server => {
+const startTestServer = async (server) => {
   // if using apollo-server-express...
   // const app = express();
   // server.applyMiddleware({ app });
