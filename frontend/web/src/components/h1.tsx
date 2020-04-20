@@ -1,11 +1,8 @@
 import React from 'react';
+import styled from 'styled-components/macro';
 
-type Props = {
-  children: React.ReactNode;
-};
-
-function H1({ children }: Props) {
-  return <h1>{children}</h1>;
-}
+const H1 = styled.h1`
+  color: ${(p) => p.theme.palette.primary.main};
+`;
 
 export { H1 };
